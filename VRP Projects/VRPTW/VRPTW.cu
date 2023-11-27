@@ -452,7 +452,7 @@ namespace VRPTW {
             printf("\nAttempt #%d ||\n", iter);
 
             if (BlockNum == 1) {
-                Kernel_1Block << < 1, threadPerBlock >> > (d_kernelParams, d_configParams);
+                Kernel_1Block <<< 1, threadPerBlock >>> (d_kernelParams, d_configParams);
             }
             else
             {
